@@ -1,0 +1,15 @@
+﻿<Window x:Class="RDPQuickLaunch.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RDPQuickLaunch"
+        mc:Ignorable="d"
+        Title="RDP Quick Launch" Height="200" Width="300">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,44,0,0">
+            <TextBox x:Name="inputBox" TextWrapping="Wrap" Text="ip address" Width="228"/>
+            <Button Content="Start" Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

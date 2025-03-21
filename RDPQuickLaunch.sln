@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35913.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RDPQuickLaunch", "RDPQuickLaunch\RDPQuickLaunch.csproj", "{51147FA4-C019-4354-9FAE-61F51E750156}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51147FA4-C019-4354-9FAE-61F51E750156}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51147FA4-C019-4354-9FAE-61F51E750156}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51147FA4-C019-4354-9FAE-61F51E750156}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51147FA4-C019-4354-9FAE-61F51E750156}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9482AB3D-5DF6-4423-8590-4A5F7DDEBFD9}
+	EndGlobalSection
+EndGlobal

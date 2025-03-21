@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Marcus-Roberto-Google-Play-Google-Chrome.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="devices_theremoteunit_hdd_687.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Marcus-Roberto-Google-Play-Google-Chrome.ico" />
+  </ItemGroup>
+
+</Project>

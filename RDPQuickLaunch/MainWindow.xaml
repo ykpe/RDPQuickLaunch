@@ -8,7 +8,8 @@
         Title="RDP Quick Launch" Height="200" Width="300">
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,44,0,0">
-            <TextBox x:Name="inputBox" TextWrapping="Wrap" Text="ip address" Width="228"/>
+            <TextBox x:Name="inputAddBox" TextWrapping="Wrap" Text="URL" Width="228"/>
+            <TextBox x:Name="inputIPBox" TextWrapping="Wrap" Text="ip address" Width="228"/>
             <Button Content="Start" Click="Button_Click"/>
         </StackPanel>
     </Grid>

@@ -1,7 +1,9 @@
 ﻿using System.Diagnostics;
 using System.IO;
 using System.Net;
+using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Threading;
 
 namespace RDPQuickLaunch
 {
@@ -33,11 +35,10 @@ namespace RDPQuickLaunch
                 inputIPBox.Text = "找不到檔案：" + filePath;
             }
         }
-        private string GetIPv4Address()
+        private string GetIPv4Address(string url)
         {
             try
             {
-                string url = inputAddBox.Text;
                 IPHostEntry hostEntry = Dns.GetHostEntry(url);
                 foreach (IPAddress ip in hostEntry.AddressList)
                 {
@@ -54,11 +55,16 @@ namespace RDPQuickLaunch
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            if(inputAddBox.Text != "URL")
+            string ipAddress = inputIPBox.Text.ToString();
+            if (inputAddBox.Text != "URL")
             {
-                inputIPBox.Text = GetIPv4Address();
+                string url = inputAddBox.Text.ToString();
+                await Task.Run(() =>
+                   {
+                       ipAddress = GetIPv4Address(url);
+                   });
             }
 
             if (File.Exists(filePath))
@@ -68,7 +74,7 @@ namespace RDPQuickLaunch
                 {
                     if (lines[i].StartsWith("full address"))
                     {
-                        lines[i] = "full address:s:" + inputIPBox.Text + ":443"; 
+                        lines[i] = "full address:s:" + ipAddress + ":443"; 
                         break;
                     }
                 }
